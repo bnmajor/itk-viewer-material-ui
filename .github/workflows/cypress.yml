@@ -7,7 +7,8 @@ jobs:
   test-material-ui-viewer:
     name: ITK Viewer Material UI Tests
     runs-on: ubuntu-20.04
-    container: cypress/browsers:node16.13.2-chrome100-ff98
+    container: cypress/browsers:node16.14.0-chrome99-ff97
+    options: --user 1001
 
     steps:
       - name: Checkout
