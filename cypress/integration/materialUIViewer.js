@@ -3,7 +3,7 @@ describe('The Material-UI Viewer', () => {
   before(() => {
     cy.visit('/')
     cy.wait(10000)
-    cy.waitForReact(1000, '.uiContainer', 'node_modules/resq/dist/index.js')
+    cy.waitForReact(10000, '.uiContainer')
 
   })
 
