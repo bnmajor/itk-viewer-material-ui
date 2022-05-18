@@ -1,6 +1,16 @@
+import LayerInterface from './LayerInterface'
+import LayersInterface from './LayersInterface'
+import selectLayer from './selectLayer'
+
 const layersUIMachineOptions = {
-  actions: {
+  layerUIActor: {
+    LayerInterface,
+
+    selectLayer
   },
+  actions: {
+    LayersInterface
+  }
 }
 
 export default layersUIMachineOptions

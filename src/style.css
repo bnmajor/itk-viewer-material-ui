@@ -1,17 +1,296 @@
+.blendMenu {
+  min-width: auto !important;
+}
+
+.blendModeButton {
+  margin-right: 5px;
+}
+
+.blendSelector {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.categoricalMenu {
+  margin: 0 5px !important;
+}
+
+.categoricalRoot {
+  height: 250px;
+}
+
+.cmapMenu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 312px !important;
+}
+
 code.uiContainer {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.viewContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.colorMapIcon {
+  height: inherit;
+  width: 100%;
+  margin: 0 3px;
+}
+
+.componentCheckbox {
+  padding: 0px !important;
+}
+
+.distanceEntry {
+  align-items: center;
+}
+
+.distanceLabelCommon {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.distanceLabelBrightBG {
+  color: black;
+}
+
+.distanceLabelDarkBG {
+  color: white;
+}
+
+.distanceInput {
+  background: transparent;
+  color: white;
+  font-size: 1.0em;
+  width: 80px;
+}
+
+.gradientOpacityScale {
+  z-index: 1100;
+  position: relative;
+}
+
+.gradientOpacityInput {
+  position: absolute !important;
+  bottom: 40px;
+  left: -35px;
+  height: 150px !important;
+  -webkit-appearance: slider-vertical;
+}
+
+.hidden {
+  visibility: hidden !important;
+  height: 0px !important;
+  margin: 0px !important;
+}
+
+.iconWithSlider {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  background: rgba(128, 128, 128, 0.8);
+  align-self: normal;
+  align-items: center;
+}
+
+.interpolationButton {
+  width: 10mm;
+}
+
+.invertibleButtonBrightBG {
+}
+
+.invertibleButtonDarkBG {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.layerEntryCommon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-width: 2px !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  border: solid;
+}
+
+.layerEntryBrightBG {
+  border-color: #666;
+}
+
+.layerEntryDarkBG {
+  border-color: #AAA;
+}
+
+.layerIcon {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 6px;
+  height: fit-content !important;
+}
+
+.layerLabelCommon {
+  border: none;
+  background: transparent;
+  font-size: 1.2em;
+  margin-right: 10px;
+  z-index: 1000;
+}
+
+.layerLabelBrightBG {
+  color: black;
+}
+
+.layerLabelDarkBG {
+  color: white;
+}
+
+.layersUIGroup {
+  background-color: rgba(128, 128, 128, 0.5);
+  margin-left: 10px;
+  max-width: 400px;
+}
+
+.layersUIRow {
+  max-width: 420px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.ItkVtkViewer-module-fpsMonitor_25TvW {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.ItkVtkViewer-module-logo_3Lu7I {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  height: 2.0em;
+  width: 2.0em;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.mainUIRow {
+  justify-content: space-evenly;
+  max-width: 420px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px;
+}
+
+.Mui-selected {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.MuiIconButton-root {
+  padding: 6px 12px !important;
+}
+
+.MuiIcon-root {
+  font-size: 1.3rem !important;
+}
+
+.MuiIcon-root img{
+  width: inherit;
+  height: inherit;
+}
+
+.MuiMenuItem-root {
+  width: 100px !important;
+  padding: 6px 0 !important;
+}
+
+.MuiSelect-select {
+  padding: 10px 30px 10px 10px !important;
+}
+
+.MuiSelect-selectMenu {
+  text-overflow: inherit !important;
+}
+
+.numberInput {
+  min-width: 98px;
+}
+
+.piecewiseWidget {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  z-index: 1000;
+}
+
+.planeSliders {
+  display: flex;
+  align-items: center;
+  padding-right: 2px;
+}
+
+.selectedLayer {
+  border: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-width: 3px !important;
+}
+
+.selector {
+  display: flex;
+  direction: row;
+  font-size: 1.2em;
+  z-index: 1000;
+}
+
+.shadowButton {
+  width: 8mm;
+  padding: 4px;
+  padding-left: 0px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.slider {
+  flex: 1;
+  min-height: 1rem;
+  width: 5px;
+  align-self: center;
+  margin-right: 5px;
+}
+
+.sliderEntry {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sliderIcons {
+  margin: 5px !important;
+  padding: 0 !important;
+}
+
+.toggleButton {
+  line-height: inherit !important;
+  border: none !important;
+  margin: 1px !important;
+}
+
+.toggledOffIcon {
+  opacity: 0.45;
+}
+
+.tooltipButtonBrightBG::before {
+}
+
+.tooltipButtonDarkBG::before {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 
 .uiContainer {
@@ -32,4 +311,77 @@ code.uiContainer {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.uiGroup {
+  background: rgba(128, 128, 128, 0.5);
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.uiImages {
+  padding: 10px;
+  max-width: 420px;
+}
+
+.uiRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.uiSlidersGroup {
+  background: rgba(128, 128, 128, 0.5);
+  position: fixed;
+  bottom: 0;
+  left: 85px;
+  width: calc(100% - 90px);
+  margin: 10px 0;
+}
+
+.uiSlidersGroupCondensed {
+  background: rgba(128, 128, 128, 0.5);
+  position: fixed;
+  bottom: 0;
+  left: 420px;
+  width: calc(100% - 425px);
+  margin: 10px 0;
+}
+
+.viewContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: rgba(128, 128, 128, 0.8);
+}
+
+.viewModeButton {
+  flex: 1;
+  width: 8mm;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.viewModeButton img {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.viewModeButtons {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+.visibleIcon {
+  display: inline-block;
 }

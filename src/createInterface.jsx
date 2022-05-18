@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './style.css'
 import Panel from './Panel'
+import MainInterface from './Main/MainInterface'
+import LayersInterface from './Layers/LayersInterface'
+import ImagesInterface from './Images/ImagesInterface'
+import WidgetsInterface from './Widgets/WidgetsInterface'
+import AppToolbar from './AppToolbar'
 
 function createInterface(context) {
   context.viewContainers = new Map()
@@ -18,10 +23,20 @@ function createInterface(context) {
   }
 
   context.rootContainer.appendChild(context.uiContainer)
+  if (!context.uiGroups) {
+    // String to UI group element map
+    context.uiGroups = new Map()
+  }
 
-  context.uiPanel = ReactDOM.render(
+  ReactDOM.render(
     <React.StrictMode>
-      <Panel />
+      <AppToolbar service={context.service} />
+      <Panel service={context.service}>
+        <MainInterface />
+        <LayersInterface />
+        <WidgetsInterface />
+        <ImagesInterface />
+      </Panel>
     </React.StrictMode>,
     context.uiContainer
   )

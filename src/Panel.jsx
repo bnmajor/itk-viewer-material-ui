@@ -1,45 +1,35 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
+import React, { useEffect, useRef } from 'react'
+import { useActor } from '@xstate/react'
+import { Drawer } from '@mui/material'
 import './Panel.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+function Panel(props) {
+  const { children, service } = props
+  const uiPanel = useRef(null)
+  const uiDrawer = useRef(null)
+  const [state] = useActor(service)
+
+  useEffect(() => {
+    state.context.uiPanel = uiPanel.current
+    state.context.uiDrawer = uiDrawer.current
+  }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div ref={uiPanel} className="root">
+      <Drawer
+        className="drawer"
+        variant="persistent"
+        anchor="left"
+        open={!state.context.uiCollapsed}
+      >
+        <div ref={uiDrawer}>
+          {React.Children.map(children, (child) => {
+            return React.cloneElement(child, { service })
+          })}
+        </div>
+      </Drawer>
     </div>
   )
 }
 
-export default App
+export default Panel
